@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Sample CRUD</string>
+    <string name="action_add">adicionar</string>
+    <string name="description">Descrição</string>
+    <string name="urlfoto">UrlFoto</string>
+    <string name="name">Nome</string>
+    <string name="save">Salvar</string>
+    <string name="registros">Registros :</string>
+    <string name="tempo">Tempo:</string>
+</resources>

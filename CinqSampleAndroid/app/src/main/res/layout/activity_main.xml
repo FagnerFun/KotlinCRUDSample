@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+                                              xmlns:app="http://schemas.android.com/apk/res-auto"
+                                              android:layout_width="match_parent"
+                                              android:layout_height="match_parent"
+                                              android:orientation="vertical" >
+
+    <include layout="@layout/include_toolbar" />
+    <androidx.appcompat.widget.LinearLayoutCompat android:layout_width="match_parent"
+                                                  android:layout_height="wrap_content"
+                                                  android:background="?attr/colorPrimary"
+                                                  android:orientation="horizontal">
+        <TextView
+                android:id="@+id/textTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/registros"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textColor="#FFFFFF"
+                android:textAlignment="center"
+                android:layout_margin="10dp"/>
+
+        <TextView
+                android:id="@+id/tRegistros"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text=""
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                app:layout_constraintStart_toEndOf="@+id/textTitle"
+                app:layout_constraintTop_toBottomOf="@+id/textTitle"/>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <androidx.appcompat.widget.LinearLayoutCompat android:layout_width="match_parent"
+                                                  android:layout_height="wrap_content"
+                                                  android:background="?attr/colorPrimary"
+                                                  android:orientation="horizontal">
+        <TextView
+                android:id="@+id/textTitleTimer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/tempo"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textColor="#FFFFFF"
+                android:textAlignment="center"
+                android:layout_margin="10dp"/>
+
+        <TextView
+                android:id="@+id/tTimer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text=""
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                app:layout_constraintStart_toEndOf="@+id/textTitle"
+                app:layout_constraintTop_toBottomOf="@+id/textTitle"/>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <!-- Layout principal -->
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                                                       android:id="@+id/swipeToRefresh"
+                                                       android:layout_width="match_parent"
+                                                       android:layout_height="match_parent">
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <!-- Grid de carros -->
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cacheColorHint="@android:color/transparent"
+                android:clipToPadding="false"
+                android:divider="@null"
+                android:dividerHeight="0dp"
+                android:listSelector="@android:color/transparent"
+                android:scrollbarStyle="outsideOverlay"
+                android:scrollbars="vertical" />
+
+        <include layout="@layout/include_progress" />
+
+    </FrameLayout>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>
